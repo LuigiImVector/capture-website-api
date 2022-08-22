@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-exercises",
+  "version": "1.0.0",
+  "description": "I try to learn NodeJS",
+  "license": "MIT",
+  "author": "LuigiImVector",
+  "repository": "sindresorhus/capture-website",
+  "type": "module",
+  "main": "./index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "dependencies": {
+    "capture-website": "^3.0.0",
+    "mime": "^3.0.0",
+    "valid-url": "^1.0.9"
+  },
+  "devDependencies": {
+    "eslint": "^8.22.0"
+  }
+}
