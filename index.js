@@ -19,7 +19,7 @@ const server = http.createServer((req, res) => {
         switch (path) {
             case "/getImage":
                 try {
-                    getImage(urlQuery, res); // get method value
+                    getImage(urlQuery, res);
                 } catch (error) {
                     console.log(error);
                     res.writeHead(500, { 'Content-Type': 'text/plain' });
@@ -32,6 +32,10 @@ const server = http.createServer((req, res) => {
                 res.write("Wrong request, read the documentation");
                 res.end();
         }
+    } else {
+        res.writeHead(400, { 'Content-Type': 'text/plain' });
+        res.write("Method not supported, read the documentation");
+        res.end();
     }
 
     logHttpRequest(req, res);
