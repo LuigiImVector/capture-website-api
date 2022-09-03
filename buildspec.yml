@@ -6,12 +6,17 @@ phases:
     runtime-versions:
       nodejs: 16
     commands:
-      - echo install process started
+      - echo Installing Mocha...
+      - npm install -g mocha
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies...
       - npm install
+      - npm install index.js
   build:
     commands:
-      - echo build process started now
-      - npm run test
+      - echo Compiling the Node.js code
+      - mocha index.js
   post_build:
     commands:
       - echo build process finished
