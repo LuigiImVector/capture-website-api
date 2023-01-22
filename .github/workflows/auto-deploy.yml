@@ -21,6 +21,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
           route: GET http://167.172.107.45:3000/update/api/
-          owner: octokit
-          repo: request-action
 
