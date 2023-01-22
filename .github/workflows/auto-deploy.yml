@@ -1,0 +1,22 @@
+name: auto-deploy
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: octokit/request-action@v2.x
+      with:
+          route: GET http://167.172.107.45:3000/update/api/
+          owner: octokit
+          repo: request-action
+

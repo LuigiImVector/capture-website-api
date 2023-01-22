@@ -4,7 +4,7 @@ import validUrl from 'valid-url';
 import { getImage } from './modules/controller.js';
 import { logHttpRequest } from './modules/utils.js';
 
-const hostname = '127.0.0.1';
+const hostname = '127.0.0.1'; // cancellare
 const port = 8000;
 
 const server = http.createServer((req, res) => {
