@@ -4,7 +4,6 @@ import validUrl from 'valid-url';
 import { getImage } from './modules/controller.js';
 import { logHttpRequest } from './modules/utils.js';
 
-const hostname = '127.0.0.1'; // cancellare
 const port = 8000;
 
 const server = http.createServer((req, res) => {
@@ -41,6 +40,6 @@ const server = http.createServer((req, res) => {
     logHttpRequest(req, res);
 });
 
-server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
+server.listen(port, () => {
+    console.log(`Server running at port ${port}!`);
 });

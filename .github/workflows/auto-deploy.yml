@@ -1,3 +1,4 @@
+# Auto update & deploy of the application on the VPS
 name: auto-deploy
 
 on:
